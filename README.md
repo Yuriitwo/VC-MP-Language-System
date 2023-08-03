@@ -10,20 +10,20 @@ Follow the steps below to set up the Multi-Language System on your server:
 
 2. After downloading the repository, you will find two files. Copy the "LanguageSystem.nut" file to the scripts folder of your server. In the "Essential.nut" file, you will find everything you need to install the system.
 
-3. Add the following code in the onScriptLoad to load the functions from the "LanguageSystem.nut" file:
+3. Add the following code in the `onScriptLoad` to load the functions from the "LanguageSystem.nut" file:
 -  ```squirrel
    function onScriptLoad() {
        dofile("scripts/LanguageSystem.nut");
    }
 
-4. Also, add the following line in the onScriptLoad to create an array "Language" with the maximum number of players, so it's possible to switch between languages:
+4. Also, add the following line in the `onScriptLoad` to create an array "Language" with the maximum number of players, so it's possible to switch between languages:
 -  ```squirrel
    function onScriptLoad() {
        dofile("scripts/LanguageSystem.nut");
        Language <- array(GetMaxPlayers(), 1);
    }
 
-5. Add the "idioma" command in the onPlayerCommand function to allow players to change the language:
+5. Add the "idioma" command in the `onPlayerCommand` function to allow players to change the language:
 -  ```squirrel
    function onPlayerCommand( player, cmd, text ) {
        else if ( cmd == "idioma" || cmd == "language" || cmd == "linguagem" ) {
@@ -61,4 +61,4 @@ Follow the steps below to set up the Multi-Language System on your server:
        }
    }
 
-6. To change the language, use the /idioma command followed by the language code: "pt" for Portuguese, "en" for English, and "es" for Spanish.
+6. To change the language, use the `/idioma` command followed by the language code: `"pt"` for Portuguese, `"en"` for English, and `"es"` for Spanish.
