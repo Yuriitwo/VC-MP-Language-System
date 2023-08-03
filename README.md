@@ -26,7 +26,7 @@ Follow the steps below to set up the Multi-Language System on your server:
 5. Add the "idioma" command in the `onPlayerCommand` function to allow players to change the language:
 -  ```squirrel
    function onPlayerCommand( player, cmd, text ) {
-       else if ( cmd == "idioma" || cmd == "language" || cmd == "linguagem" ) {
+       if ( cmd == "idioma" || cmd == "language" || cmd == "linguagem" ) {
            if (!text) {
                S_MSG(sintaxe + cmd + " <pt/en/es>", player);
            }
