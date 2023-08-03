@@ -1,3 +1,9 @@
+/* -----------------------------------------------
+	Multi Language System (Server-Side)
+	Version: v1.0
+	Author: Yuriiwo#3272
+------------------------------------------------ */
+
 function onScriptLoad() {
     dofile("scripts/LanguageSystem.nut");
     Language <- array(GetMaxPlayers(), 1);
