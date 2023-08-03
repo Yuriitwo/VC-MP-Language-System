@@ -62,3 +62,19 @@ Follow the steps below to set up the Multi-Language System on your server:
    }
 
 6. To change the language, use the `/idioma` command followed by the language code: `"pt"` for Portuguese, `"en"` for English, and `"es"` for Spanish.
+
+## About the system
+
+This is a multi-language system designed to handle different messages for players in their preferred language. The system uses an array called Language to keep track of the `language` chosen by each player.
+
+1. `getMsgByLanguage(ptMsg, enMsg, esMsg, player)`
+This function takes four parameters: `ptMsg`, `enMsg`, `esMsg`, and player. It determines the message to be returned based on the player's chosen language. It first checks the Language array for the player's language preference and returns the corresponding message in that language. If the player's language is not 0 (Portuguese), 1 (English), or 2 (Spanish), it will return the ptMsg as a default fallback.
+
+2. `getMsgByLanguageAllPlayers(ptMsg, enMsg, esMsg)`
+This function takes three parameters: `ptMsg`, `enMsg` and `esMsg`. It iterates through all the players on the server and sends the appropriate message to each player based on their chosen language. It uses the MessagePlayer function to send the messages.
+
+3. `getMsgByLanguageAllExcept(ptMsg, enMsg, esMsg, player)`
+This function is similar to the previous one, but it excludes sending the message to a specific player passed as the player parameter. It iterates through all players on the server except the specified player and sends the appropriate messages to each player based on their chosen language.
+
+
+Em resumo, esse sistema permite gerenciar e enviar mensagens em diferentes idiomas com base nas preferências de cada jogador. Chamando as funções apropriadas, você pode enviar mensagens para jogadores individuais, todos os jogadores ou todos os jogadores, exceto um específico, em seus idiomas escolhidos.
