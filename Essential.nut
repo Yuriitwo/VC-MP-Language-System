@@ -16,31 +16,31 @@ function onPlayerCommand( player, cmd, text ) {
         }
         else if (text == "pt") {
             if (Language[ player.ID ] == 0 ) {
-            MessagePlayer("[#08c5ff]O idioma ja esta definido como Portugues.", player);
+            MessagePlayer("> [#fc3932]O idioma ja esta definido como Portugues.", player);
         }
         else {
                 Language[ player.ID ] = 0;
-                MessagePlayer("[#08c5ff]Idioma definido como Portugues.", player);
+                MessagePlayer("> [#08c5ff]Idioma definido como Portugues.", player);
             }
         }
         else if (text == "en") {
             if (Language[ player.ID ] == 1 ) {
-            MessagePlayer("[#08c5ff]The language is already set to English.", player);
+            MessagePlayer("> [#fc3932]The language is already set to English.", player);
         }
         else {
                 Language[ player.ID ] = 1;
-                MessagePlayer("[#08c5ff]Language set to English.", player);
+                MessagePlayer("> [#08c5ff]Language set to English.", player);
             }
         }
         else if (text == "es") {
             if (Language[ player.ID ] == 2 ) {
-            MessagePlayer("[#08c5ff]El idioma ya esta configurado en espanol.", player);
+            MessagePlayer("> [#fc3932]El idioma ya esta configurado en espanol.", player);
         }
         else {
                 Language[ player.ID ] = 2;
-                MessagePlayer("[#08c5ff]Idioma configurado en espanol.", player);
+                MessagePlayer("> [#08c5ff]Idioma configurado en espanol.", player);
             }
         }
-        else MessagePlayer(getMsgByLanguage("[#08c5ff]Esse idioma nao esta na lista.", "[#08c5ff]This language is not on the list.", "[#08c5ff]Este idioma no esta en la lista.", player), player);
+        else MessagePlayer(getMsgByLanguage("> [#fc3932]Esse idioma nao esta na lista.", "> [#08c5ff]This language is not on the list.", "> [#08c5ff]Este idioma no esta en la lista.", player), player);
     }
 }
