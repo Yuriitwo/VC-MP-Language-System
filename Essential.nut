@@ -4,7 +4,6 @@ function onScriptLoad() {
 }
 
 function onPlayerCommand( player, cmd, text ) {
-    //Esse e o comando para trocar de idioma.
     if ( cmd == "idioma" || cmd == "language" || cmd == "linguagem" ) {
         if (!text) {
             S_MSG(sintaxe + cmd + " <pt/en/es>", player);
