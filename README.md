@@ -77,4 +77,4 @@ This function takes three parameters: `ptMsg`, `enMsg` and `esMsg`. It iterates 
 This function is similar to the previous one, but it excludes sending the message to a specific player passed as the player parameter. It iterates through all players on the server except the specified player and sends the appropriate messages to each player based on their chosen language.
 
 
-Em resumo, esse sistema permite gerenciar e enviar mensagens em diferentes idiomas com base nas preferências de cada jogador. Chamando as funções apropriadas, você pode enviar mensagens para jogadores individuais, todos os jogadores ou todos os jogadores, exceto um específico, em seus idiomas escolhidos.
+Overall, this system allows you to manage and deliver messages in different languages based on each player's preferences. By calling the appropriate functions, you can send messages to individual players, all players, or all players except a specific one, in their chosen language.
