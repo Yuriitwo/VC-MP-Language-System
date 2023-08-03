@@ -1,29 +1,29 @@
-# Sistema de Multi Idioma
+# Multi-Language System
 
-Bem-vindo ao Sistema de Multi Idioma! Este é um projeto que permite adicionar 3 idiomas, mas você pode implementar mais idiomas adicionando funções base. Neste exemplo, os idiomas disponíveis são português, inglês e espanhol.
+Welcome to the Multi-Language System! This is a project that allows you to add 3 languages, but you can implement more languages by adding base functions. In this example, the available languages are Portuguese, English, and Spanish.
 
-## Instalação
+## Installation
 
-Siga os passos abaixo para configurar o Sistema de Multi Idioma em seu servidor:
+Follow the steps below to set up the Multi-Language System on your server:
 
-1. Baixe os arquivos do repositório.
+1. Download the files from the repository.
 
-2. Após baixar o repositório, você encontrará dois arquivos. Copie o arquivo "LanguageSystem.nut" para a pasta de scripts do seu servidor, no arquivo "Essential.nut" estará tudo oque voce presisa para instalar o sistema.
+2. After downloading the repository, you will find two files. Copy the "LanguageSystem.nut" file to the scripts folder of your server. In the "Essential.nut" file, you will find everything you need to install the system.
 
-3. Adicione o seguinte código no `onScriptLoad` para carregar as funções do arquivo "LanguageSystem.nut":
+3. Add the following code in the onScriptLoad to load the functions from the "LanguageSystem.nut" file:
 -  ```squirrel
    function onScriptLoad() {
        dofile("scripts/LanguageSystem.nut");
    }
 
-4. Também adicione a seguinte linha no onScriptLoad para criar uma array "Language" com o número máximo de jogadores para que seja possível trocar entre idiomas:
+4. Also, add the following line in the onScriptLoad to create an array "Language" with the maximum number of players, so it's possible to switch between languages:
 -  ```squirrel
    function onScriptLoad() {
        dofile("scripts/LanguageSystem.nut");
        Language <- array(GetMaxPlayers(), 1);
    }
 
-5. Adicione o comando "idioma" na função onPlayerCommand para permitir que os jogadores alterem o idioma:
+5. Add the "idioma" command in the onPlayerCommand function to allow players to change the language:
 -  ```squirrel
    function onPlayerCommand( player, cmd, text ) {
        else if ( cmd == "idioma" || cmd == "language" || cmd == "linguagem" ) {
@@ -61,4 +61,4 @@ Siga os passos abaixo para configurar o Sistema de Multi Idioma em seu servidor:
        }
    }
 
-6. Para trocar o idioma, use o comando /idioma seguido da sigla do idioma: "pt" para português, "en" para inglês e "es" para espanhol.
+6. To change the language, use the /idioma command followed by the language code: "pt" for Portuguese, "en" for English, and "es" for Spanish.
