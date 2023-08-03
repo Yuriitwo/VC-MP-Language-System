@@ -1,6 +1,6 @@
 # Multi-Language System
 
-Welcome to the Multi-Language System! This is a project that allows you to add 3 languages, but you can implement more languages by adding base functions. In this example, the available languages are Portuguese, English, and Spanish.
+Welcome to the Multi-Language System! This is a project that allows you to add 3 languages, but you can implement more languages by adding base functions. In this example, the available languages are Portuguese, English, and Spanish. This system was developed with the assistance of (LBR)Diego^.
 
 ## Installation
 
