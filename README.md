@@ -11,22 +11,20 @@ Siga os passos abaixo para configurar o Sistema de Multi Idioma em seu servidor:
 2. Após baixar o repositório, você encontrará dois arquivos. Copie o arquivo "LanguageSystem.nut" para a pasta de scripts do seu servidor.
 
 3. Adicione o seguinte código no `onScriptLoad` para carregar as funções do arquivo "LanguageSystem.nut":
-   
-   ```squirrel
+-  ```squirrel
    function onScriptLoad() {
        dofile("scripts/LanguageSystem.nut");
    }
 
 4. Também adicione a seguinte linha no onScriptLoad para criar uma array "Language" com o número máximo de jogadores para que seja possível trocar entre idiomas:
-
-   ```squirrel
+-  ```squirrel
    function onScriptLoad() {
        dofile("scripts/LanguageSystem.nut");
        Language <- array(GetMaxPlayers(), 1);
    }
 
 5. Adicione o comando "idioma" na função onPlayerCommand para permitir que os jogadores alterem o idioma:
-   ```squirrel
+-  ```squirrel
    function onPlayerCommand( player, cmd, text ) {
        else if ( cmd == "idioma" || cmd == "language" || cmd == "linguagem" ) {
            if (!text) {
