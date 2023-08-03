@@ -5,13 +5,13 @@
 ------------------------------------------------ */
 
 function getMsgByLanguage(ptMsg, enMsg, esMsg, player) {
-    if (status[player.ID].Language == 0) {
+    if (Language[ player.ID ] == 0) {
         return ptMsg;
     }
-	else if (status[player.ID].Language == 1) {
+	else if (Language[ player.ID ] == 1) {
         return enMsg;
     }
-	else if (status[player.ID].Language == 2) {
+	else if (Language[ player.ID ] == 2) {
         return esMsg;
     }
 }
@@ -19,9 +19,9 @@ function getMsgByLanguageAllPlayers(ptMsg, enMsg, esMsg) {
 	for(local i = 0, plr; i < GetMaxPlayers(); i++) {
 		plr = FindPlayer(i);
 		if ( plr ) {
-			if (status[plr.ID].Language == 0) MessagePlayer(ptMsg, plr);
-			else if (status[plr.ID].Language == 1) MessagePlayer(enMsg, plr);
-			else if (status[plr.ID].Language == 2) MessagePlayer(esMsg, plr);
+			if (Language[ plr.ID ] == 0) MessagePlayer(ptMsg, plr);
+			else if (Language[ plr.ID ] == 1) MessagePlayer(enMsg, plr);
+			else if (Language[ plr.ID ] == 2) MessagePlayer(esMsg, plr);
 		}
 	}
 }
@@ -29,9 +29,9 @@ function getMsgByLanguageAllExcept(ptMsg, enMsg, esMsg, player) {
     for(local i = 0, plr; i < GetMaxPlayers(); i++) {
         plr = FindPlayer(i);
         if (plr && plr.ID != player.ID) {
-            if (status[plr.ID].Language == 0) MessagePlayer("" + ptMsg, plr);
-            else if (status[plr.ID].Language == 1) MessagePlayer("" + enMsg, plr);
-            else if (status[plr.ID].Language == 2) MessagePlayer("" + esMsg, plr);
+            if (Language[ plr.ID ] == 0) MessagePlayer("" + ptMsg, plr);
+            else if (Language[ plr.ID ] == 1) MessagePlayer("" + enMsg, plr);
+            else if (Language[ plr.ID ] == 2) MessagePlayer("" + esMsg, plr);
         }
     }
 }
