@@ -4,30 +4,8 @@ function onScriptLoad() {
 }
 
 function onPlayerCommand( player, cmd, text ) {
-    else if ( cmd == "test" ) {
-        if (!text) MessagePlayer(cmd + " <1/2/3>", player); {
-            //Esse exemplo pode ser usado para mensagems que são enviadas apenas para o player que usou.
-            if (text == "1") {
-                MessagePlayer(getMsgByLanguage("Ola jogador!", "Hello player!", "Hola jugador.", player), player);
-            }
-
-            //Esse exemplo pode ser usado para mandar mensagens para todos os players
-            else if (text == "2") {
-                getMsgByLanguageAllPlayers("Ola jogadores", "Hello players", "Hola jugadores");
-            }
-
-            //Esse exemplo pode ser usado para mandar mensagens para todos os players, menos o player que usou o comando.
-            else if (text == "3") {
-                getMsgByLanguageAllExcept(player.Name + " mandou um oi para o servidor.", player.Name + " says hi to the server", player.Name + " saluda al servidor.", player);
-            }
-            else {
-                MessagePlayer(cmd + " <1/2/3>", player);
-            }
-        }
-    }
-
     //Esse e o comando para trocar de idioma.
-    else if ( cmd == "idioma" || cmd == "language" || cmd == "linguagem" ) {
+    if ( cmd == "idioma" || cmd == "language" || cmd == "linguagem" ) {
         if (!text) {
             S_MSG(sintaxe + cmd + " <pt/en/es>", player);
         }
