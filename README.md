@@ -25,39 +25,39 @@ Follow the steps below to set up the Multi-Language System on your server:
 
 5. Add the "idioma" command in the `onPlayerCommand` function to allow players to change the language:
 -  ```squirrel
-   function onPlayerCommand( player, cmd, text ) {
+      function onPlayerCommand( player, cmd, text ) {
        if ( cmd == "idioma" || cmd == "language" || cmd == "linguagem" ) {
            if (!text) {
-               S_MSG(sintaxe + cmd + " <pt/en/es>", player);
+               MessagePlayer( cmd + " <pt/en/es>", player);
            }
            else if (text == "pt") {
                if (Language[ player.ID ] == 0 ) {
-               E_MSG("O idioma ja esta definido como Portugues.", player);
+               MessagePlayer("> [#fc3932]O idioma ja esta definido como Portugues.", player);
            }
            else {
                    Language[ player.ID ] = 0;
-                   I_MSG("Idioma definido como Portugues.", player);
+                   MessagePlayer("> [#08c5ff]Idioma definido como Portugues.", player);
                }
            }
            else if (text == "en") {
                if (Language[ player.ID ] == 1 ) {
-               E_MSG("The language is already set to English.", player);
+               MessagePlayer("> [#fc3932]The language is already set to English.", player);
            }
            else {
                    Language[ player.ID ] = 1;
-                   I_MSG("Language set to English.", player);
+                   MessagePlayer("> [#08c5ff]Language set to English.", player);
                }
            }
            else if (text == "es") {
                if (Language[ player.ID ] == 2 ) {
-               E_MSG("El idioma ya esta configurado en espanol.", player);
+               MessagePlayer("> [#fc3932]El idioma ya esta configurado en espanol.", player);
            }
            else {
                    Language[ player.ID ] = 2;
-                   I_MSG("Idioma configurado en espanol.", player);
+                   MessagePlayer("> [#08c5ff]Idioma configurado en espanol.", player);
                }
            }
-           else E_MSG(getMsgByLanguage("Esse idioma nao esta na lista.", "This language is not on the list.", "Este idioma no esta en la lista.", player), player);
+           else MessagePlayer(getMsgByLanguage("> [#fc3932]Esse idioma nao esta na lista.", "> [#08c5ff]This language is not on the list.", "> [#08c5ff]Este idioma no esta en la lista.", player), player);
        }
    }
 
