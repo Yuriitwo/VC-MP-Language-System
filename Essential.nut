@@ -12,7 +12,7 @@ function onScriptLoad() {
 function onPlayerCommand( player, cmd, text ) {
     if ( cmd == "idioma" || cmd == "language" || cmd == "linguagem" ) {
         if (!text) {
-            MessagePlayer( cmd + " <pt/en/es>", player);
+            MessagePlayer( "/> [#08c5ff]" + cmd + " <pt/en/es>", player);
         }
         else if (text == "pt") {
             if (Language[ player.ID ] == 0 ) {
