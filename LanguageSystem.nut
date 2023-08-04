@@ -35,3 +35,4 @@ function getMsgByLanguageAllExcept(ptMsg, enMsg, esMsg, player) {
         }
     }
 }
+print("Multi Language System has been loaded, by Yuriitwo and Diego^.");
